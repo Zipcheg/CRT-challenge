@@ -98,9 +98,10 @@
                    Height="38" Width="112"/>
 
             <Button Content="{Binding NameReadStreamButtom}" 
-                Command="{Binding ReadStreamButtomCommand}" 
-                HorizontalAlignment="Left" VerticalAlignment="Top" 
-                Width="112" Height="38" Grid.Column="1" Grid.Row="3"/>
+                    Command="{Binding ReadStreamButtomCommand}"
+                    IsEnabled="{Binding IsEnabled}"
+                    HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    Width="112" Height="38" Grid.Column="1" Grid.Row="3"/>
 
             <Label Content="Поток записи" 
                    Grid.Column="3" Grid.Row="2"
@@ -110,9 +111,10 @@
                    Height="38" Width="112"/>
 
             <Button Content="{Binding NameWriteStreamButtom}" 
-                Command="{Binding WriteStreamButtomCommand}" 
-                HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="112" Height="38" Grid.Column="3" Grid.Row="3"/>
+                    Command="{Binding WriteStreamButtomCommand}"
+                    IsEnabled="{Binding IsEnabled}"
+                    HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Width="112" Height="38" Grid.Column="3" Grid.Row="3"/>
         </Grid>
     </Grid>
 </Page>

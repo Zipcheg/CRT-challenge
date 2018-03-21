@@ -32,10 +32,14 @@ namespace AppCopyFile
         private int percentageWriteStream;
         private int sizeBuffer;
 
+        private bool isEnabled;
+
         private long fileSize;
 
         public CopyProcessViewModel()
         {
+            IsEnabled = true;
+
             nameReadStreamButtom = "Приостановить";
             nameWriteStreamButtom = "Приостановить";
 
@@ -48,6 +52,18 @@ namespace AppCopyFile
             stateButtomReadStream = StateButtom.Pause;
             stateButtomWriteStream = StateButtom.Pause;
 
+        }
+
+        public bool IsEnabled
+        {
+            get
+            {
+                return isEnabled;
+            }
+            set
+            {
+                SetProperty(ref isEnabled, value);
+            }
         }
 
         public string ColorStreamWriteBuffer
@@ -145,6 +161,7 @@ namespace AppCopyFile
             if(obj == fileSize)
             {
                 //TODO: Отчистка стримов.
+                IsEnabled = false;
                 MessageBox.Show("Копирование завершено!", "", MessageBoxButton.OK, MessageBoxImage.Information );
                 fileReader.Dispose();
                 fileWriter.Dispose();
