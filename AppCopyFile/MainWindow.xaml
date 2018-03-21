@@ -1,0 +1,17 @@
+﻿<Window x:Class="AppCopyFile.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppCopyFile"
+        mc:Ignorable="d"
+        Title="CopyProgramm" Height="400" Width="620"
+        MinWidth="600" MinHeight="420" 
+        MaxHeight="420" MaxWidth="600"
+        Background="Tan">
+
+    <Grid>
+        <Frame x:Name="MainFrame" Background="#CCCC" NavigationUIVisibility="Hidden"/>
+    </Grid>
+
+</Window>
