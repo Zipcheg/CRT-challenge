@@ -25,6 +25,10 @@ namespace AppCopyFile
 
         public MainViewModel()
         {
+            PeriodRead = "100";
+            PeriodWrite = "200";
+            SizeBuffer = "200000";
+
             startCommand = new DelegateCommand(Start);
             openReadFileCommand = new DelegateCommand(DoOpenReadFileCommand);
             openWriteFileCommand = new DelegateCommand(DoOpenWriteFileCommand);

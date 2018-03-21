@@ -99,7 +99,7 @@
                 <ColumnDefinition Width="15*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Content="Период" 
+            <Label Content="Период, мс" 
                    HorizontalContentAlignment="Center"
                    Grid.Column="2" Grid.Row="1"
                    HorizontalAlignment="Left" VerticalAlignment="Top"
@@ -147,7 +147,7 @@
                 <ColumnDefinition Width="15*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Content="Буффер" 
+            <Label Content="Буффер, байты" 
                    HorizontalContentAlignment="Center"
                    Grid.Column="2" Grid.Row="1"
                    HorizontalAlignment="Left" VerticalAlignment="Top"
