@@ -161,7 +161,7 @@ namespace AppCopyFile
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
-                InitialDirectory = "c:\\",
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
                 FilterIndex = 2,
                 RestoreDirectory = true
             };
@@ -194,7 +194,7 @@ namespace AppCopyFile
 
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
-                InitialDirectory = "c:\\",
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
                 FilterIndex = 2,
                 RestoreDirectory = true,
                 CheckFileExists = false
@@ -224,6 +224,7 @@ namespace AppCopyFile
 
                 openFileDialog.Reset();
                 openFileDialog.ShowDialog();
+                openFileDialog.CheckFileExists = false;
                 PathFileWrite = "";
             }
         }
