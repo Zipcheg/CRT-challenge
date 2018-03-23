@@ -163,7 +163,8 @@ namespace AppCopyFile
             {
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
                 FilterIndex = 2,
-                RestoreDirectory = true
+                RestoreDirectory = true,
+                Title = "ReadFile"
             };
 
             try
@@ -197,7 +198,8 @@ namespace AppCopyFile
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
                 FilterIndex = 2,
                 RestoreDirectory = true,
-                CheckFileExists = false
+                CheckFileExists = false,
+                Title = "WriteFile"
             };
 
             try
