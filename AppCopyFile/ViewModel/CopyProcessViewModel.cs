@@ -156,13 +156,20 @@ namespace AppCopyFile
 
         private void OnWriteStreamPercentageChanged(long obj)
         {
-            PercentageWriteStream = (int)(obj * 100 / fileSize);
-
-            if(obj == fileSize)
+            if (fileSize > 0)
+                PercentageWriteStream = (int)(obj * 100 / fileSize);
+            else
+                PercentageWriteStream = 100;
+            
+            if(PercentageWriteStream == 100)
             {
                 //TODO: Отчистка стримов.
+                fileReader.Pause();
+                fileWriter.Pause();
+
                 IsEnabled = false;
                 MessageBox.Show("Копирование завершено!", "", MessageBoxButton.OK, MessageBoxImage.Information );
+
                 fileReader.Dispose();
                 fileWriter.Dispose();
             }
@@ -227,14 +234,17 @@ namespace AppCopyFile
 
             try
             {
+
                 fileReader = new FileReader(pathFileRead, buffer, this.periodRead);
 
                 fileReader.Start();
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            
             
         }
 

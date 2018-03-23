@@ -49,8 +49,9 @@ namespace AppCopyFile
                 if (buffer.TryCopyTo(fileStream, out int written) && written > 0)
                 {
                     offset = offset + written;
-                    ProgressChanged?.Invoke(offset);
                 }
+
+                ProgressChanged?.Invoke(offset);
             }
             catch (Exception ex)
             {
